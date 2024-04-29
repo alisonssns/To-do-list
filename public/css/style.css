@@ -1,0 +1,304 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+    background-color: #57a900;
+    background-image: -moz-linear-gradient(top, #70d900, #57a900);
+    background-image: -ms-linear-gradient(top, #70d900, #57a900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+    background-image: -o-linear-gradient(top, #70d900, #57a900);
+    background-image: linear-gradient(top, #70d900, #57a900);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    background-color: #57a900;
+}
+
+div.container a.navbar-brand>img {
+    display: inline;
+    margin-right: 4px;
+    margin-top: -2px;
+}
+
+.container:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    width: 1000px;
+    height: 470px;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.352);
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.left {
+    background-color: rgba(221, 221, 221, 0.263);
+    width: 25%;
+    border-radius: 10px;
+    height: 430px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left .title {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.left hr {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+.tasks {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.left .tasks .title {
+    width: 100%;
+    justify-content: start;
+    font-style: italic;
+    font-size: 11px;
+    height: 15px;
+}
+
+.wrap {
+    width: 95%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap .row {
+    width: 100%;
+    height: 25%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.wrap .row:hover {
+    background-color: rgba(255, 255, 255, 0.564);
+}
+
+.row .text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#icon1 {
+    background-image: url(https://static-00.iconduck.com/assets.00/dotted-circle-icon-512x512-g1azpnt0.png);
+}
+
+#icon2 {
+    background-image: url(https://icons.veryicon.com/png/o/business/my-library/pending-disposal-1.png);
+}
+
+#icon3 {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2782/2782895.png);
+}
+
+.singOut .icon {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/126/126467.png);
+}
+
+.singOut {
+    margin-top: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.right .title {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+}
+
+.tasks-holder {
+    margin-top: 12px;
+    width: 95%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.task {
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: rgba(38, 0, 255, 0.118);
+    transition: 0.5s ease;
+}
+
+.plus {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/32/32339.png);
+}
+
+.taskHead {
+    width: 100%;
+    background-color: rgba(38, 0, 255, 0.652);
+    height: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.task .title {
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.task .desc {
+    width: 100%;
+    height: 130px;
+    padding: 5px;
+    font-size: 11px;
+    text-align: justify;
+    text-justify: distribute;
+}
+
+a{
+    color: unset;
+    text-decoration: unset;
+}
+
+a:hover{
+    color: unset;
+    text-decoration: unset;
+}
+
+#boxAdd{
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.5s ease;
+}
+
+#boxAdd > .rows > *{
+    width: 200px;
+}
+
+.task:hover{
+    background-color: rgba(38, 0, 255, 0.268);
+}
+
+.date{
+    width: 100px;
+    height: 15px;
+    font-size: 11px;
+    text-indent: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.statuss{
+    width: 15px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 2px solid white;
+}
+
+.remove-form{
+    position: relative;
+    top: 50px;
+}
+
+.remover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}

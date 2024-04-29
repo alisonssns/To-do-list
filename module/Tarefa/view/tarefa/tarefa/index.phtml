@@ -1,0 +1,58 @@
+<div class="box">
+    <div class="left">
+        <div class="title">MENU</div>
+        <hr>
+        <div class="tasks">
+            <div class="title">TAREFAS</div>
+            <div class="wrap">
+                <a href="<?= $this->url('tarefa', ['status' => 'Pendente']) ?>" class="row">
+                    <div class="icon" id="icon1"></div>
+                    <div class="text">Pendentes</div>
+                </a>
+                <a href="<?= $this->url('tarefa', ['action' => 'index', 'status' => 'Progresso']) ?>" class="row">
+                    <div class="icon" id="icon2"></div>
+                    <div class="text">Em progresso</div>
+                </a>
+                <a href="<?= $this->url('tarefa', ['action' => 'index', 'status' => 'Concluida']) ?>" class="row">
+                    <div class="icon" id="icon3"></div>
+                    <div class="text">Concluidas</div>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="singOut">
+            <div class="icon"></div>
+            <div class="text">Sing Out</div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">Minhas Tarefas</div>
+        <div class="tasks-holder">
+            <?php
+            foreach ($tarefas as $t):
+                ?>
+                <a href="<?= $this->url('tarefa', ['action' => 'update', 'id' => $t->getId()]) ?>" class="task">
+                    <div class="taskHead">
+                        <div class="date"><?= $t->getDate() ?></div>
+                        <?php
+                        if ($t->getStatus() == 'Pendente') {
+                            echo '<div class="statuss" style="background-color: rgb(255, 0, 0)"></div>';
+                        } else if ($t->getStatus() == 'Progresso') {
+                            echo '<div class="statuss" style="background-color: rgb(255, 255, 0)"></div>';
+                        } else if ($t->getStatus() == 'Concluida') {
+                            echo '<div class="statuss" style=" background-color: rgb(0, 255, 0)"></div>';
+                        }
+                        ?>
+                    </div>
+                    <div class="title"> <?= $t->getTitle() ?></div>
+                    <div class="desc"><?= $t->getDesc() ?></div>
+                </a>
+                <?php
+            endforeach;
+            ?>
+            <a href="<?= $this->url('tarefa', ['action' => 'add']) ?>" class="task">
+                <div class="plus"></div>
+            </a>
+        </div>
+    </div>
+</div>

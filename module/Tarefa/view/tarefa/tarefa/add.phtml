@@ -1,0 +1,48 @@
+<?php
+$form->setAttribute('action', $this->url('tarefa', ['action' => 'add']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+
+$id = $this->form->get('id');
+$title = $this->form->get('title');
+$desc = $this->form->get('desc');
+$date = $this->form->get('date');
+$status = $this->form->get('status');
+$save = $this->form->get('submit');
+
+$title->setAttribute('class', 'titulo');
+$desc->setAttribute('class', 'desc');
+$date->setAttribute('class', 'date');
+$status->setAttribute('class', 'status');
+$save->setAttribute('class', 'salvar');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="boxAdd">
+        <?= $this->formElement($date) ?>
+        <div class="rows">
+            <?= $this->formElement($title) ?>
+        </div>
+        <div class="rows">
+            <?= $this->formElement($desc) ?>
+        </div>
+
+        <div class="status">
+            <?= $this->formElement($status) ?>
+        </div>
+        <?= $this->formElement($save) ?>
+    </div>
+</body>
+
+</html>
